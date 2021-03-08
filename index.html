@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <style>
+            html {
+                font-family:'Roboto', sans-serif;
+                font-size: 15px;
+            }
+            .middle-page {
+                display: flex;
+                height: 450px;
+                flex-direction: column;
+                align-items: center;
+            }
             .google-logo {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-            }
+                padding: 90px 400px 20px 400px}
             .button {
+                display: inline-block;
+                padding-top: 30px;
+                padding-left: 20px;
+                align-self: center;
+            }
+            .searchbar input {
+                width: 500px;
+            }
+            #twobuttons {
+                display: block;
+                align-items: center;
+                margin-left: 90px;
             }
             .navbar {
                 height: 5%;
                 width: 100%;
-            }
+                font-size: 14px;}
             #nav-ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                overflow: hidden;
-            }
+                overflow: hidden;}
             .bar {
-                float: right;
-            }
+                float: right;}
             .bar a {
                 color: black;
                 text-align: center;
                 padding: 14px 16px;
-                text-decoration: none;
-            }
+                text-decoration: none;}
+            .bar a:hover {
+                text-decoration: underline;}
             .bar button {
                 text-align: center;
                 padding: 14px 16px;
-                text-decoration: none;
-            }
+                text-decoration: none;}
+            #gmail {
+                padding-top: 16px;
+                padding-right: 13px;}
+            #images{
+                padding-top: 15px;}
+            .footbar {
+                padding: 15px 5px 15px 5px;
+                background-color: rgb(240, 238, 238);
+                margin-left: -8px; 
+                margin-right: -8px;
+                margin-bottom: -20px;
+                margin-top: 40px;}
             #navfoot {
                 list-style-type: none;
                 margin: 0;
@@ -40,24 +74,36 @@
                 overflow: hidden;
                 height: 5%;
                 width: 100%;
-            }
+                padding-top: 10px;}
+            .usa-foot {
+                padding-left: 15px;
+                color: rgb(70, 70, 70);
+                border-bottom: 1px solid #dadce0;
+                margin-top: -10px;}
             .footlineleft {
-                float: left;
-            }
+                float: left;}
             .footlineleft a {
-                color: black;
+                color: rgb(70, 70, 70);
                 text-align: center;
                 padding: 14px 16px;
-                text-decoration: none;
-            }
+                text-decoration: none;}
+            .footlineleft:hover {
+                color:rgb(70, 70, 70);
+                text-decoration: underline;}
             .footlineright {
                 float: right;
-            }
+                color: rgb(70, 70, 70);}
+            .footlineright:hover {
+                color: rgb(70, 70, 70);
+                text-decoration: underline;}
             .footlineright a {
-                color: black;
+                color: rgb(70, 70, 70);
                 text-align: center;
                 padding: 14px 16px;
-                text-decoration: none;
+                text-decoration: none;}
+            #settings {
+                padding-left: 10px;
+                padding-right: 20px;
             }
         </style>
         <title>Google</title>
@@ -69,13 +115,13 @@
                     <li class="bar">
                         <form action="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.co.uk%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
                             <button type="submit">Sign In</button>
-                        </form>
-                    </li>
-                    <li class="bar"><a href="https://www.google.com/intl/pt/gmail/about/">Gmail</a></li>
-                    <li class="bar"><a href="https://www.google.com.br/imghp?hl=en&ogbl">Images</a></li>
+                        </form></li>
+                    <li class="bar" id="gmail"><a href="https://www.google.com/intl/pt/gmail/about/">Gmail</a></li>
+                    <li class="bar" id="images"><a href="https://www.google.com.br/imghp?hl=en&ogbl">Images</a></li>
                 </ul>
             </div>
-            <div class="google-logo">
+            <div class="middle-page">
+                <div class="google-logo">
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"
         width="272" height="92">
             </div>
@@ -83,22 +129,25 @@
                 <div class="searchbar">
                     <input type="search">
                 </div>
-                <div class="button">
-                    <input type="button" value=" Google Search">
-                </div>
-                <div class="button">
-                    <input type="button" value="I`m Feeling Lucky">
+                <div id="twobuttons">
+                    <div class="button" id="search">
+                        <input type="button" value=" Google Search">
+                    </div>
+                    <div class="button" id="lucky">
+                        <input type="button" value="I`m Feeling Lucky">
+                    </div>
                 </div>
             </div>
         </div>
+        </div>
         <footer class="footbar">
-            <p>United States of America</p>
+            <div class="usa-foot"><p>United States of America</p></div>
             <ul id="navfoot">
                 <li class="footlineleft"><a href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a></li>
                 <li class="footlineleft"><a href="https://ads.google.com/intl/en_br/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
                 <li class="footlineleft"><a href="https://smallbusiness.withgoogle.com/intl/pt-BR_br/help/#!/">Business</a></li>
                 <li class="footlineleft"><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a></li>
-                <li class="footlineright">Settings</li>
+                <li class="footlineright" id="settings">Settings</li>
                 <li class="footlineright"><a href="https://policies.google.com/terms?hl=en-BR&fg=1">Terms</a></li>
                 <li class="footlineright"><a href="https://policies.google.com/privacy?hl=en-BR&fg=1">Privacy</a></li>
             </ul>
